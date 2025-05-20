@@ -210,11 +210,17 @@ To use the NixOS module, configure your flake.nix:
 }
 ```
 
-Then enable the module in your NixOS configuration:
+Then enable and configure the module in your NixOS configuration:
 
 ```nix
 {
-  programs.zwift.enable = true;
+  programs.zwift = {
+   enable = true;
+
+   #dontPull = true;
+   #dontCheck = true;
+   #version = "1.87.0";
+  }
 }
 ```
 
