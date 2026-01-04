@@ -66,7 +66,7 @@
           VGA_DEVICE_FLAG=${vgaDeviceFlag}
           PRIVILEGED_CONTAINER=${privilegedContainer}
 
-          ${./zwift.sh}
+          source ${./zwift.sh}
         '';
 
         nativeBuildInputs = [ pkgs.copyDesktopItems ];
